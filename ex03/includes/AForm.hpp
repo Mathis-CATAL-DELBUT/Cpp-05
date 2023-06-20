@@ -6,7 +6,7 @@
 /*   By: mcatal-d <mcatal-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/18 13:43:47 by mcatal-d          #+#    #+#             */
-/*   Updated: 2023/06/20 13:01:40 by mcatal-d         ###   ########.fr       */
+/*   Updated: 2023/06/20 14:10:43 by mcatal-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ class AForm
         
 
     public:
-        ~AForm();
+        virtual ~AForm();
         AForm(std::string const name, int sign, int exec, const std::string& target);
         AForm(const AForm& copy);
         

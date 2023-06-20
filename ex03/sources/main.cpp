@@ -6,7 +6,7 @@
 /*   By: mcatal-d <mcatal-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/16 14:00:47 by mcatal-d          #+#    #+#             */
-/*   Updated: 2023/06/20 13:45:28 by mcatal-d         ###   ########.fr       */
+/*   Updated: 2023/06/20 14:16:48 by mcatal-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,43 +23,44 @@
 
 #include "Bureaucrat.hpp"
 #include "AForm.hpp"
+#include "Intern.hpp"
 #include "ShrubberyCreationForm.hpp"
 #include "RobotomyRequestForm.hpp"
 #include "PresidentialPardonForm.hpp"
 
 int main()
 {
-    try 
-    {
-        // Pesident
-        {
-            // Bureaucrat b("Ted", 150);
-		    // PresidentialPardonForm f("PRESIDENT FORM");
-            // std::cout << f << std::endl;
-            // b.signForm(f);
-		    // std::cout << f << std::endl;
-		    // b.executeForm(f);
-        }
-        // Robot
-        {
-            // Bureaucrat b("Ted", 1);
-		    // RobotomyRequestForm f("ROBOT FORM");
-            // std::cout << f << std::endl;
-            // b.signForm(f);
-		    // std::cout << f << std::endl;
-		    // b.executeForm(f);
-        }
-        //Arbre ASCII
-        {
-            // Bureaucrat b("Ted", 145);
-		    // ShrubberyCreationForm f("TREE FORM");
-            // std::cout << f << std::endl;
-            // b.signForm(f);
-		    // std::cout << f << std::endl;
-		    // b.executeForm(f);
-        }
-    }
-    catch (const std::exception& e) {
-        std::cout << e.what() << std::endl;
-    }
+	try {
+		Intern someRandomIntern;
+		Bureaucrat Boss("Boss", 1);
+		AForm* rrf;
+		AForm* ppf;
+		AForm* scf;
+		
+		rrf = someRandomIntern.makeForm("robotomy request", "Bender");
+		ppf = someRandomIntern.makeForm("presidential pardon", "Bender");
+		scf = someRandomIntern.makeForm("shrubbery creation", "Bender");
+		
+		Boss.signForm(*rrf);
+		Boss.signForm(*ppf);
+		Boss.signForm(*scf);
+		Boss.executeForm(*scf);
+		Boss.executeForm(*ppf);
+		Boss.executeForm(*rrf);
+		
+		delete rrf;
+		delete ppf;
+		delete scf;
+	}
+	catch (std::exception& e) {
+		std::cout << e.what() << std::endl;
+	}
+	// try {
+	// 	Intern someRandomIntern;
+	// 	AForm* rrf;
+	// 	rrf = someRandomIntern.makeForm("inexistant form", "Bender");	
+	// }
+	// catch (std::exception& e) {
+	// 	std::cout << e.what() << std::endl;
+	// }
 }

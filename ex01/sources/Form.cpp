@@ -6,7 +6,7 @@
 /*   By: mcatal-d <mcatal-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/18 14:08:41 by mcatal-d          #+#    #+#             */
-/*   Updated: 2023/06/19 10:43:21 by mcatal-d         ###   ########.fr       */
+/*   Updated: 2023/06/20 14:37:34 by mcatal-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,6 +49,12 @@ std::ostream& operator<<(std::ostream& out, const Form& form)
         out << "not signed";
     out << " and requires a grade " << form.getGrade_sign() << " to be signed and a grade " << form.getGrade_exec() << " to be executed." << std::endl;
     return out;
+}
+
+Form& Form::operator=(const Form& copy)
+{
+    this->signature = copy.signature;
+    return *this;
 }
 
 const char* Form::GradeTooHighException::what() const throw()

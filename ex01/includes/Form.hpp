@@ -6,7 +6,7 @@
 /*   By: mcatal-d <mcatal-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/18 13:43:47 by mcatal-d          #+#    #+#             */
-/*   Updated: 2023/06/18 15:53:44 by mcatal-d         ###   ########.fr       */
+/*   Updated: 2023/06/20 14:37:00 by mcatal-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,13 +23,14 @@ class Bureaucrat;
 class Form
 {
     private:
-        std::string name;
+        const std::string name;
         bool signature;
         const int grade_sign;
         const int grade_exec;
 
     private:
         Form();
+         Form &operator=(const Form &copy);
         
     public:
         class GradeTooHighException : public std::exception

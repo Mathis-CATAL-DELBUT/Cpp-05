@@ -6,7 +6,7 @@
 /*   By: mcatal-d <mcatal-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/16 14:00:47 by mcatal-d          #+#    #+#             */
-/*   Updated: 2023/06/20 13:45:28 by mcatal-d         ###   ########.fr       */
+/*   Updated: 2023/06/20 14:21:05 by mcatal-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,12 +51,12 @@ int main()
         }
         //Arbre ASCII
         {
-            // Bureaucrat b("Ted", 145);
-		    // ShrubberyCreationForm f("TREE FORM");
-            // std::cout << f << std::endl;
-            // b.signForm(f);
-		    // std::cout << f << std::endl;
-		    // b.executeForm(f);
+            Bureaucrat b("Ted", 1);
+		    ShrubberyCreationForm f("TREE FORM");
+            std::cout << f << std::endl;
+            b.signForm(f);
+		    std::cout << f << std::endl;
+		    b.executeForm(f);
         }
     }
     catch (const std::exception& e) {

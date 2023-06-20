@@ -6,7 +6,7 @@
 /*   By: mcatal-d <mcatal-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/16 12:55:34 by mcatal-d          #+#    #+#             */
-/*   Updated: 2023/06/18 15:13:46 by mcatal-d         ###   ########.fr       */
+/*   Updated: 2023/06/20 14:33:25 by mcatal-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,9 +23,10 @@ class Form;
 class Bureaucrat
 {
     private :
-        std::string name;
+        const std::string name;
         int grade;
         Bureaucrat();
+        Bureaucrat &operator=(const Bureaucrat &copy);
     public:
         class GradeTooHighException: public std::exception 
         {

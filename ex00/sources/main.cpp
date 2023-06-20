@@ -6,7 +6,7 @@
 /*   By: mcatal-d <mcatal-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/16 14:00:47 by mcatal-d          #+#    #+#             */
-/*   Updated: 2023/06/18 13:42:14 by mcatal-d         ###   ########.fr       */
+/*   Updated: 2023/06/20 14:34:32 by mcatal-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,12 +35,12 @@ int main()
 
         //situation Normal
         {
-            // Bureaucrat Bureaucrat("Boss", 1);
-            // std::cout << Bureaucrat;
-            // Bureaucrat.decrementation();
-            // std::cout << Bureaucrat;
-            // Bureaucrat.incrementation();
-            // std::cout << Bureaucrat;
+            Bureaucrat Bureaucrat("Boss", 1);
+            std::cout << Bureaucrat;
+            Bureaucrat.decrementation();
+            std::cout << Bureaucrat;
+            Bureaucrat.incrementation();
+            std::cout << Bureaucrat;
         }
     }
     catch (std::exception& e)

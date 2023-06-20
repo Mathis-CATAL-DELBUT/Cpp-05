@@ -6,7 +6,7 @@
 /*   By: mcatal-d <mcatal-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/20 09:40:19 by mcatal-d          #+#    #+#             */
-/*   Updated: 2023/06/20 11:13:50 by mcatal-d         ###   ########.fr       */
+/*   Updated: 2023/06/20 14:40:36 by mcatal-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,16 +37,16 @@ void ShrubberyCreationForm::action() const
         std::cout << "Error opening file" << std::endl;
         return ;
     }
-        file << "       _-_" << std::endl;
-        file << "    /~~   ~~\\" << std::endl;
-        file << " /~~         ~~\\" << std::endl;
-        file << "{               }" << std::endl;
-        file << " \\  _-     -_  /" << std::endl;
-        file << "   ~  \\\\ //  ~" << std::endl;
-        file << "_- -   | | _- _" << std::endl;
-        file << "  _ -  | |   -_" << std::endl;
-        file << "      // \\\\" << std::endl;
-        file << "     //   \\\\" << std::endl;
-        file << std::endl;
+    file << "       _-_" << std::endl;
+    file << "    /~~   ~~\\" << std::endl;
+    file << " /~~         ~~\\" << std::endl;
+    file << "{               }" << std::endl;
+    file << " \\  _-     -_  /" << std::endl;
+    file << "   ~  \\\\ //  ~" << std::endl;
+    file << "_- -   | | _- _" << std::endl;
+    file << "  _ -  | |   -_" << std::endl;
+    file << "      // \\\\" << std::endl;
+    file << "     //   \\\\" << std::endl;
+    file << std::endl;
     file.close();
 }

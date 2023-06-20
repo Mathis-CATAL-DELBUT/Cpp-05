@@ -6,7 +6,7 @@
 /*   By: mcatal-d <mcatal-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/16 13:04:04 by mcatal-d          #+#    #+#             */
-/*   Updated: 2023/06/20 13:38:44 by mcatal-d         ###   ########.fr       */
+/*   Updated: 2023/06/20 14:40:17 by mcatal-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,8 @@ Bureaucrat::Bureaucrat(){}
 
 Bureaucrat::~Bureaucrat(){}
 
-Bureaucrat::Bureaucrat(const std::string name, int grade)
+Bureaucrat::Bureaucrat(const std::string name, int grade) : name(name)
 {
-    this->name = name;
     this->grade = grade;
     if (grade < 1)
         throw Bureaucrat::GradeTooHighException();

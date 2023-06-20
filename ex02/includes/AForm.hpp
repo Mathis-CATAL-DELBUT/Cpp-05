@@ -6,7 +6,7 @@
 /*   By: mcatal-d <mcatal-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/18 13:43:47 by mcatal-d          #+#    #+#             */
-/*   Updated: 2023/06/20 13:01:40 by mcatal-d         ###   ########.fr       */
+/*   Updated: 2023/06/20 14:39:53 by mcatal-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,14 +23,13 @@ class Bureaucrat;
 class AForm
 {
     private:
-        std::string name;
+        const std::string name;
         bool signature;
         const int grade_sign;
         const int grade_exec;
 
     private:
         AForm();
-        
         
 
     public:
